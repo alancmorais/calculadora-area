@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Calculadora de Área de Quadriláteros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+    #quadrado {
+        width: 100px;
+        height: 100px;
+        background: blue;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <img src="https://www.colegiopectrus.com.br/images/logo.png" width="200">
+        <span class="navbar-brand mb-0 h1">Calculadora de Área de Quadriláteros</span>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Essa calculadora irá calcular a área de um quadrado.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Um quadrado tem os lados e os ângulos iguais.</p>
+            </div>
+            <div class="col-md-6">
+            <div id="quadrado"></div>
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="ladoQuadrado">Lado</label>
+                    <input type="number" class="form-control" id="ladoQuadrado">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <button type="button" class="btn btn-primary" onclick="CalculaQuadrado()">Calcular</button>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label for="areaQuadrado">Área do Quadrado</label>
+                <input type="number" class="form-control" id="areaQuadrado">
+            </div>
+        </div>
+    </div>
+    <script>
+        function CalculaQuadrado() {
+            var ladoQuadrado = document.getElementById("ladoQuadrado").value;
+
+            var area = Math.pow(ladoQuadrado, 2);
+
+            var inputAreaQuadrado = document.getElementById("areaQuadrado");
+            inputAreaQuadrado.value = area;
+
+        }
+    </script>
+</body>
+
+</html>
